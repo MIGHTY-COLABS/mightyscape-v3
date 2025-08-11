@@ -50,7 +50,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-8" style={{ paddingRight:'50px'}}>
             {navItems.map((item) => (
               <Link
                 key={item.name}
@@ -65,12 +65,12 @@ export default function Header() {
                 {item.name}
               </Link>
             ))}
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
           </nav>
 
           {/* Mobile menu button */}
           <div className="flex items-center space-x-4 md:hidden">
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
             <Button
               variant="ghost"
               size="icon"
