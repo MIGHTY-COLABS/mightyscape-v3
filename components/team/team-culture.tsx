@@ -11,19 +11,25 @@ import { ArrowRight } from "lucide-react";
 const culturePoints = [
   {
     title: "Innovation Mindset",
-    description: "We encourage creative thinking and exploration of new technologies to stay ahead of the curve.",
-    image: "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    description:
+      "We encourage creative thinking and exploration of new technologies to stay ahead of the curve.",
+    image:
+      "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
   {
     title: "Continuous Learning",
-    description: "We invest in our team's growth through training, conferences, and knowledge sharing sessions.",
-    image: "https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    description:
+      "We invest in our team's growth through training, conferences, and knowledge sharing sessions.",
+    image:
+      "https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
   {
     title: "Work-Life Balance",
-    description: "We value downtime and personal well-being, knowing it leads to better creativity and productivity.",
-    image: "https://images.pexels.com/photos/3182833/pexels-photo-3182833.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-  }
+    description:
+      "We value downtime and personal well-being, knowing it leads to better creativity and productivity.",
+    image:
+      "https://images.pexels.com/photos/3182833/pexels-photo-3182833.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  },
 ];
 
 export default function TeamCulture() {
@@ -36,7 +42,7 @@ export default function TeamCulture() {
   if (!mounted) return null;
 
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-16 md:py-24 flex items-center justify-center min-h-screen text-center">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -51,7 +57,7 @@ export default function TeamCulture() {
             It's how we work, collaborate, and grow together.
           </p>
         </motion.div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {culturePoints.map((point, index) => (
             <motion.div
@@ -80,7 +86,7 @@ export default function TeamCulture() {
             </motion.div>
           ))}
         </div>
-        
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -90,8 +96,9 @@ export default function TeamCulture() {
         >
           <h3 className="text-2xl font-bold mb-4">Join Our Team</h3>
           <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-            We're always looking for talented individuals who share our passion for technology and innovation.
-            Check out our current openings or send us your resume.
+            We're always looking for talented individuals who share our passion
+            for technology and innovation. Check out our current openings or
+            send us your resume.
           </p>
           <Button asChild>
             <Link href="/careers" className="group">
