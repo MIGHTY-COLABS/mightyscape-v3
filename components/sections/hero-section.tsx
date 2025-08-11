@@ -28,7 +28,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-background/0 dark:from-primary/10 dark:to-background/0" />
       
       <div className="container relative z-10" style={{ paddingLeft: '2rem' }}>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" style={{ paddingLeft: '20px'}}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -87,7 +87,7 @@ export default function HeroSection() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="relative hidden lg:block"
           >
-            <div className="aspect-video bg-gradient-to-tr from-primary/20 via-secondary/20 to-accent/20 rounded-lg relative overflow-hidden shadow-xl backdrop-blur-sm bg-white/10">
+            {/* <div className="aspect-video bg-gradient-to-tr from-primary/20 via-secondary/20 to-accent/20 rounded-lg relative overflow-hidden shadow-xl backdrop-blur-sm bg-white/10">
               <div className="absolute inset-0 grid grid-cols-3 grid-rows-3 gap-4 p-6">
                 {Array.from({ length: 9 }).map((_, i) => (
                   <div 
@@ -99,7 +99,7 @@ export default function HeroSection() {
               <div className="absolute inset-0 flex items-center justify-center">
                 <span className="text-2xl font-bold text-white">MIGHTYSCAPE</span>
               </div>
-            </div>
+            </div> */}
           </motion.div>
         </div>
       </div>

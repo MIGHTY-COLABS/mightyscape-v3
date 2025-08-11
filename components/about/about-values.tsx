@@ -50,7 +50,7 @@ export default function AboutValues() {
   return (
     <section className="py-16 md:py-24 bg-muted/30">
       <div className="container">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" style={{ paddingLeft: '50px', paddingRight: '50px' }}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

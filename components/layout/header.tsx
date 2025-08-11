@@ -41,7 +41,7 @@ export default function Header() {
     >
       <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center space-x-2" style={{ paddingLeft:'50px'}}>
             <img 
               src="https://mightyscape.com/image/Artboard%201.png" 
               alt="MIGHTYSCAPE" 

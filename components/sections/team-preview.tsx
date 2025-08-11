@@ -17,13 +17,13 @@ const teamMembers = [
   },
   {
     name: "Minu Theresia",
-    title: "Project Manager | Co-founder",
+    title: "Project Manager | Founder",
     image: "https://mightyscape.com/image/minu.png",
     linkedin: "#"
   },
   {
     name: "Paul Cheriyan",
-    title: "Full Stack Developer | Co-founder",
+    title: "Full Stack Developer | Founder",
     image: "https://mightyscape.com/image/paul.jpg",
     linkedin: "#"
   },
@@ -46,7 +46,7 @@ export default function TeamPreview() {
   if (!mounted) return null;
 
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-20 bg-muted/30" style={{ paddingLeft: '50px', paddingRight: '50px' }}>
       <div className="container">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <motion.h2
