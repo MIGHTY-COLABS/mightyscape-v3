@@ -61,7 +61,7 @@ const products = [
     color: "bg-chart-3/10",
     textColor: "text-chart-3",
     image:
-      "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://cdn.mightyscape.in/ms/images/digital-signage.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     features: [
       "Centralized content management",
       "Remote display control",
