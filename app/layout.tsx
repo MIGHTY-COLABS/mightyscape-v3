@@ -4,6 +4,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import { Toaster } from "@/components/ui/sonner";
+import GoogleAnalytics from '@/components/google-analytics';
 
 export const metadata: Metadata = {
   title: 'MIGHTYSCAPE - Leading Software Development Company in Kerala | IPTV & OTT Solutions',
