@@ -70,7 +70,7 @@ export default function TeamPreview() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+        {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
           {teamMembers.map((member, index) => (
             <motion.div
               key={member.name}
@@ -106,7 +106,7 @@ export default function TeamPreview() {
               </Card>
             </motion.div>
           ))}
-        </div>
+        </div> */}
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}

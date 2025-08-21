@@ -62,7 +62,7 @@ export default function TeamPage() {
       />
       <div className="flex flex-col w-full pt-24">
         <TeamHero />
-        <TeamMembers />
+        {/* <TeamMembers /> */}
         <NinjasX />
         <TeamCulture />
       </div>

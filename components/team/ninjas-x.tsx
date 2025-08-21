@@ -28,7 +28,9 @@ export default function NinjasX() {
           <div className="relative z-10 p-8 md:p-12">
             <div className="flex flex-col md:flex-row md:items-center justify-between">
               <div className="mb-6 md:mb-0">
-                <h2 className="text-3xl font-bold mb-3">🔥 The Ninjas X</h2>
+                <h2 className="text-3xl font-bold mb-3">
+                  🔥 The MIGHTYSCAPIANS
+                </h2>
                 <p className="text-xl max-w-2xl">
                   Our silent but unstoppable tech warriors who make the magic
                   happen behind the scenes.
@@ -73,23 +75,23 @@ export default function NinjasX() {
                         </li>
                         <li className="flex justify-between items-center">
                           <span>Designers:</span>
-                          <span className="text-xl font-bold">5+</span>
+                          <span className="text-xl font-bold">2+</span>
                         </li>
                         <li className="flex justify-between items-center">
                           <span>Product Specialists:</span>
-                          <span className="text-xl font-bold">8+</span>
+                          <span className="text-xl font-bold">4+</span>
                         </li>
                         <li className="flex justify-between items-center">
                           <span>Years of Experience:</span>
                           <span className="text-xl font-bold">100+</span>
                         </li>
                         <li className="flex justify-between items-center">
-                          <span>Countries:</span>
-                          <span className="text-xl font-bold">7</span>
+                          <span>Happiness Counter:</span>
+                          <span className="text-xl font-bold">Infinite</span>
                         </li>
                         <li className="flex justify-between items-center">
                           <span>Coffees per Week:</span>
-                          <span className="text-xl font-bold">250+</span>
+                          <span className="text-xl font-bold">Counting</span>
                         </li>
                       </ul>
                     </div>
@@ -191,14 +193,14 @@ export default function NinjasX() {
 
                   <div className="mt-8 p-6 bg-background/60 backdrop-blur-sm rounded-lg">
                     <h3 className="text-xl font-semibold mb-4">
-                      The Ninja Manifesto
+                      The MIGHTY Manifesto
                     </h3>
                     <blockquote className="text-lg italic border-l-4 border-primary pl-4">
                       "We work in the shadows to serve the light. Our code is
                       our craft, our solutions our legacy. We build not just for
                       today, but for tomorrow's challenges. Quality is
                       non-negotiable, and the user experience is paramount. We
-                      are The Ninjas X — silent, effective, unstoppable."
+                      are The MIGHTYSCAPIANS  — silent, effective, unstoppable."
                     </blockquote>
                   </div>
                 </motion.div>
