@@ -19,7 +19,7 @@ export default function HeroSection() {
     <section 
       className="relative min-h-screen flex items-center pt-24"
       style={{
-        backgroundImage: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(https://mightyscape.com/css/66741775b4fcc728ced7b3bf_hero.webp)',
+        backgroundImage: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(/css/66741775b4fcc728ced7b3bf_hero.webp)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'

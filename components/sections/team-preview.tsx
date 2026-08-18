@@ -12,25 +12,25 @@ const teamMembers = [
   {
     name: "Nikhil C Gopi",
     title: "Solution Architect | Founder",
-    image: "https://mightyscape.com/image/nikhil_c.jpg",
+    image: "/image/nikhil_c.jpg",
     linkedin: "#"
   },
   {
     name: "Minu Theresia",
     title: "Project Manager | Founder",
-    image: "https://mightyscape.com/image/minu.png",
+    image: "/image/minu.png",
     linkedin: "#"
   },
   {
     name: "Paul Cheriyan",
     title: "Full Stack Developer | Founder",
-    image: "https://mightyscape.com/image/paul.jpg",
+    image: "/image/paul.jpg",
     linkedin: "#"
   },
   {
     name: "Nithin Thomas",
     title: "Backend Developer",
-    image: "https://mightyscape.com/image/nithin.jpg",
+    image: "/image/nithin.jpg",
     linkedin: "#"
   }
 ];

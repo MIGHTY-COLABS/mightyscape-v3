@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://mightyscape.com/image/Artboard%201.png',
+        url: '/image/Artboard%201.png',
         width: 1200,
         height: 630,
         alt: 'MIGHTYSCAPE - Software Development Company in Kerala',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'MIGHTYSCAPE - Leading Software Development Company in Kerala',
     description: 'Premier software development company in Kerala specializing in IPTV and OTT platform solutions, mobile and web app development, and digital signage solutions.',
-    images: ['https://mightyscape.com/image/Artboard%201.png'],
+    images: ['/image/Artboard%201.png'],
   },
   alternates: {
     canonical: 'https://mightyscape.com',
@@ -52,7 +52,7 @@ export default function RootLayout({
     name: 'MIGHTYSCAPE PRIVATE LIMITED',
     alternateName: 'MIGHTYSCAPE',
     url: 'https://mightyscape.com',
-    logo: 'https://mightyscape.com/image/Artboard%201.png',
+    logo: '/image/Artboard%201.png',
     description: 'Leading software development company in Kerala, India, specialising in IPTV and OTT platform solutions, mobile and web app development, digital signage solutions, DRM, CDN, and custom software development services.',
     address: {
       '@type': 'PostalAddress',
