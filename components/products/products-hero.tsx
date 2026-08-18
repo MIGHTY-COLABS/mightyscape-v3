@@ -42,8 +42,11 @@ export default function ProductsHero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex flex-wrap justify-center gap-4"
           >
+            <a href="#pureiptv" className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium hover:bg-primary/20 transition-colors">
+              PureIPTV
+            </a>
             <a href="#livelink" className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium hover:bg-primary/20 transition-colors">
-              LiveLink IPTV
+              LiveLink OTT
             </a>
             <a href="#hostlink" className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium hover:bg-primary/20 transition-colors">
               HostLink Suite

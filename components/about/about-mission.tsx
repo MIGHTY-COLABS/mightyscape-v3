@@ -23,7 +23,7 @@ const timeline = [
   {
     year: "2025",
     title: "Driven by Purpose",
-    description: "With products like LIVELINK IPTV, HostLink, and Digital Signage evolving fast, our mission became clearer: to build with purpose, to serve with integrity, and to always put people — clients and teammates — at the center of every line of code."
+    description: "With products like PureIPTV, LIVELINK OTT, HostLink, and Digital Signage evolving fast, our mission became clearer: to build with purpose, to serve with integrity, and to always put people — clients and teammates — at the center of every line of code."
   }
 ];
 

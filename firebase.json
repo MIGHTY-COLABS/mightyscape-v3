@@ -1,0 +1,13 @@
+{
+  "hosting": {
+    "site": "mightyscape-7d11a",
+    "public": "out",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "cleanUrls": true,
+    "trailingSlash": true
+  }
+}

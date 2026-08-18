@@ -90,13 +90,13 @@ export default function ContactDetails() {
       
       <div className="rounded-xl overflow-hidden h-[400px] relative bg-muted">
         <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.5247557658728!2d76.43661631479055!3d10.297482992646234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080b4a2c4acd89%3A0x9b1b41ea0f56c7e8!2sKoovappady%2C%20Kerala!5e0!3m2!1sen!2sin!4v1647887842012!5m2!1sen!2sin"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4899.072949542855!2d76.47025757592553!3d10.144800789968148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b07e30022fe674b%3A0xb85c249fa8fcec45!2sMIGHTYSCAPE%20PRIVATE%20LIMITED!5e1!3m2!1sen!2sin!4v1787032140663!5m2!1sen!2sin"
           width="100%"
           height="100%"
           style={{ border: 0 }}
           allowFullScreen
           loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
+          referrerPolicy="strict-origin-when-cross-origin"
         ></iframe>
       </div>
     </motion.div>
