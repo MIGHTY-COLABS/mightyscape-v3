@@ -43,7 +43,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-2" style={{ paddingLeft:'50px'}}>
             <img 
-              src="https://mightyscape.com/image/Artboard%201.png" 
+              src="/image/Artboard%201.png" 
               alt="MIGHTYSCAPE" 
               className="h-8"
             />

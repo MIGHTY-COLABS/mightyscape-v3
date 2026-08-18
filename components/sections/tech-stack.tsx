@@ -7,75 +7,75 @@ import { motion } from "framer-motion";
 const techStack = [
   {
     alt_text: "Android mobile app development platform",
-    image_url: "https://mightyscape.com/image/logos/android.png"
+    image_url: "/image/logos/android.png"
   },
   {
     alt_text: "Android TV IPTV platform development",
-    image_url: "https://mightyscape.com/image/logos/android_tv.png"
+    image_url: "/image/logos/android_tv.png"
   },
   {
     alt_text: "iOS mobile app development",
-    image_url: "https://mightyscape.com/image/logos/ios.png"
+    image_url: "/image/logos/ios.png"
   },
   {
     alt_text: "Apple TV OTT platform development",
-    image_url: "https://mightyscape.com/image/logos/iostv.png"
+    image_url: "/image/logos/iostv.png"
   },
   {
     alt_text: "Roku streaming platform development",
-    image_url: "https://mightyscape.com/image/logos/roku.png"
+    image_url: "/image/logos/roku.png"
   },
   {
     alt_text: "Samsung Tizen smart TV development",
-    image_url: "https://mightyscape.com/image/logos/tizen.png"
+    image_url: "/image/logos/tizen.png"
   },
   {
     alt_text: "Java enterprise software development",
-    image_url: "https://mightyscape.com/image/logos/java.png"
+    image_url: "/image/logos/java.png"
   },
   {
     alt_text: "Kotlin Android app development",
-    image_url: "https://mightyscape.com/image/logos/kotlin.png"
+    image_url: "/image/logos/kotlin.png"
   },
   {
     alt_text: "Swift iOS app development",
-    image_url: "https://mightyscape.com/image/logos/swift.png"
+    image_url: "/image/logos/swift.png"
   },
   {
     alt_text: "Node.js backend development",
-    image_url: "https://mightyscape.com/image/logos/node.png"
+    image_url: "/image/logos/node.png"
   },
   {
     alt_text: "Google Cloud Platform services",
-    image_url: "https://mightyscape.com/image/logos/google.png"
+    image_url: "/image/logos/google.png"
   },
   {
     alt_text: "AWS cloud infrastructure services",
-    image_url: "https://mightyscape.com/image/logos/aws.png"
+    image_url: "/image/logos/aws.png"
   },
   {
     alt_text: "Microsoft Azure cloud services",
-    image_url: "https://mightyscape.com/image/logos/azure.png"
+    image_url: "/image/logos/azure.png"
   },
   {
     alt_text: "Firebase mobile backend services",
-    image_url: "https://mightyscape.com/image/logos/firebase.png"
+    image_url: "/image/logos/firebase.png"
   },
   {
     alt_text: "Nagra DRM content protection",
-    image_url: "https://mightyscape.com/image/logos/nagra.png"
+    image_url: "/image/logos/nagra.png"
   },
   {
     alt_text: "LG webOS smart TV platform",
-    image_url: "https://mightyscape.com/image/logos/lg.png"
+    image_url: "/image/logos/lg.png"
   },
   {
     alt_text: "Flussonic streaming server technology",
-    image_url: "https://mightyscape.com/image/logos/Artboard 41 copy 2.png"
+    image_url: "/image/logos/Artboard 41 copy 2.png"
   },
   {
     alt_text: "Cloudflare CDN and security services",
-    image_url: "https://mightyscape.com/image/logos/Artboard 41.png"
+    image_url: "/image/logos/Artboard 41.png"
   }
 ];
 

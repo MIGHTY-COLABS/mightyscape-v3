@@ -31,7 +31,7 @@ export default function Footer() {
           <div>
             <Link href="/" className="inline-block mb-6">
               <img 
-                src="https://mightyscape.com/image/Artboard%201.png" 
+                src="/image/Artboard%201.png" 
                 alt="MIGHTYSCAPE - Leading Software Development Company in Kerala" 
                 className="h-8"
               />
