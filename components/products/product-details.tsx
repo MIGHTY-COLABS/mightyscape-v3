@@ -8,11 +8,33 @@ import { Check, Tv, Building, Layout } from "lucide-react";
 
 const products = [
   {
+    id: "pureiptv",
+    title: "PureIPTV",
+    subtitle: "IPTV Platform Solutions",
+    description:
+      "A powerful and flexible IPTV platform built for operators, service providers, and businesses to deliver live television and digital content across modern TV platforms.",
+    icon: Tv,
+    color: "bg-chart-4/10",
+    textColor: "text-chart-4",
+    image: "https://cdn.mightyscape.in/ms/images/pure-iptv.webp",
+    demoUrl: "https://pureiptv.live",
+    features: [
+      "Multi-platform live TV & VOD content delivery",
+      "Flexible operator and service provider architecture",
+      "Custom branding & middleware integration",
+      "Multi-screen compatibility (Smart TVs, Mobile, STB)",
+      "High-performance stream management & optimization",
+      "Content security and access control mechanisms",
+      "Scalable cloud and on-premise deployment options",
+      "Real-time subscriber and stream analytics",
+    ],
+  },
+  {
     id: "livelink",
     title: "LIVELINK",
-    subtitle: "IPTV & OTT Platform",
+    subtitle: "OTT Platform",
     description:
-      "End-to-end IPTV platform with support for Android TV, Apple TV, iOS, LG, Roku, and Samsung Smart TVs. High performance, DRM-ready, and fully client-branded for a seamless viewing experience.",
+      "End-to-end OTT platform with support for Android TV, Apple TV, iOS, LG, Roku, and Samsung Smart TVs. High performance, DRM-ready, and fully client-branded for a seamless viewing experience.",
     icon: Tv,
     color: "bg-chart-1/10",
     textColor: "text-chart-1",
@@ -39,7 +61,7 @@ const products = [
     color: "bg-chart-2/10",
     textColor: "text-chart-2",
     image:
-      "https://cdn.mightyscape.in/ms/images/hostlink-home.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://cdn.mightyscape.in/ms/images/hostlink-mightyscape.webp",
     features: [
       "Reservation and booking management",
       "Guest profile and preferences tracking",
@@ -61,7 +83,7 @@ const products = [
     color: "bg-chart-3/10",
     textColor: "text-chart-3",
     image:
-      "https://cdn.mightyscape.in/ms/images/digital-signage.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://cdn.mightyscape.in/ms/images/digital-signage-mightyscape.webp",
     features: [
       "Centralized content management",
       "Remote display control",
@@ -137,7 +159,15 @@ export default function ProductDetails() {
                   ))}
                 </div>
 
-                <Button>Request Demo</Button>
+                {product.demoUrl ? (
+                  <Button asChild>
+                    <a href={product.demoUrl} target="_blank" rel="noopener noreferrer">
+                      Request Demo
+                    </a>
+                  </Button>
+                ) : (
+                  <Button>Request Demo</Button>
+                )}
               </motion.div>
 
               <motion.div

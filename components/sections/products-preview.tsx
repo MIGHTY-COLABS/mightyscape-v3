@@ -9,10 +9,20 @@ import { ArrowUpRight, Tv, Building, Layout } from "lucide-react";
 
 const products = [
   {
+    id: "pureiptv",
+    title: "PureIPTV",
+    subtitle: "IPTV Platform Solutions",
+    description: "A powerful and flexible IPTV platform built for operators, service providers, and businesses to deliver live television and digital content across modern TV platforms.",
+    icon: Tv,
+    color: "bg-chart-4/10",
+    textColor: "text-chart-4",
+    href: "/products#pureiptv"
+  },
+  {
     id: "livelink",
     title: "LIVELINK",
-    subtitle: "IPTV & OTT Platform Solutions",
-    description: "End-to-end IPTV and OTT platform solutions for Android TV, Smart TVs, and more. High performance, DRM-ready, client-branded streaming solutions.",
+    subtitle: "OTT Platform Solutions",
+    description: "End-to-end OTT platform solutions for Android TV, Smart TVs, and more. High performance, DRM-ready, client-branded streaming solutions.",
     icon: Tv,
     color: "bg-chart-1/10",
     textColor: "text-chart-1",
@@ -74,7 +84,7 @@ export default function ProductsPreview() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto px-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto px-4">
           {products.map((product, index) => (
             <motion.div
               key={product.id}

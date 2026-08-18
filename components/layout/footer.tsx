@@ -59,7 +59,8 @@ export default function Footer() {
           <div>
             <FooterHeading>Software Products</FooterHeading>
             <ul className="space-y-3 text-sm">
-              <li><FooterLink href="/products#livelink">LiveLink IPTV & OTT Platform Solutions</FooterLink></li>
+              <li><FooterLink href="/products#pureiptv">PureIPTV Platform Solutions</FooterLink></li>
+              <li><FooterLink href="/products#livelink">LiveLink OTT Platform Solutions</FooterLink></li>
               <li><FooterLink href="/products#hostlink">HostLink Hospitality Management Software</FooterLink></li>
               <li><FooterLink href="/products#signage">Digital Signage Solutions</FooterLink></li>
             </ul>

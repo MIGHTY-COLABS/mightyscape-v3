@@ -145,7 +145,8 @@ export default function ContactForm() {
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
-                        <SelectItem value="livelink">LiveLink IPTV</SelectItem>
+                        <SelectItem value="pureiptv">PureIPTV</SelectItem>
+                        <SelectItem value="livelink">LiveLink OTT</SelectItem>
                         <SelectItem value="hostlink">HostLink Suite</SelectItem>
                         <SelectItem value="signage">Digital Signage</SelectItem>
                         <SelectItem value="custom-dev">Custom Development</SelectItem>
