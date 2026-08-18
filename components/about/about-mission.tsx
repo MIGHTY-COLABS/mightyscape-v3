@@ -24,6 +24,11 @@ const timeline = [
     year: "2025",
     title: "Driven by Purpose",
     description: "With products like PureIPTV, LIVELINK OTT, HostLink, and Digital Signage evolving fast, our mission became clearer: to build with purpose, to serve with integrity, and to always put people — clients and teammates — at the center of every line of code."
+  },
+  {
+    year: "2026",
+    title: "Market Expansion & Client Success",
+    description: "Successfully launched our suite of platforms — PureIPTV, LiveLink OTT, HostLink, and Digital Signage — to the global market, delivering exceptional experiences to delighted clients and thousands of happy daily users."
   }
 ];
 
