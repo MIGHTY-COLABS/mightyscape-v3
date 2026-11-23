@@ -1,8 +1,4 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { ShieldCheck, Users, Lightbulb, Clock, Zap, Award } from "lucide-react";
 
 const values = [
@@ -39,24 +35,11 @@ const values = [
 ];
 
 export default function AboutValues() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) return null;
-
   return (
-    <section className="py-16 md:py-24 bg-muted/30">
+    <section className="values-section py-16 md:py-24 bg-muted/30">
       <div className="container">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" style={{ paddingLeft: '50px', paddingRight: '50px' }}>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
             <h2 className="text-3xl font-bold mb-6">Our Values as a Software Development Company</h2>
             <p className="text-muted-foreground mb-8 max-w-lg">
               At MIGHTYSCAPE, our values are the foundation of everything we do as a leading software development company in Kerala. 
@@ -65,13 +48,9 @@ export default function AboutValues() {
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {values.map((value, index) => (
-                <motion.div
+              {values.map((value) => (
+                <div
                   key={value.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="flex"
                 >
                   <div className="mr-4 mt-1 h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -81,18 +60,12 @@ export default function AboutValues() {
                     <h3 className="font-semibold mb-1">{value.title}</h3>
                     <p className="text-sm text-muted-foreground">{value.description}</p>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
           
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="relative lg:ml-12"
-          >
+          <div className="relative lg:ml-12">
             <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
               <Image
                 src="https://images.pexels.com/photos/3182781/pexels-photo-3182781.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
@@ -110,7 +83,7 @@ export default function AboutValues() {
             {/* Decorative elements */}
             <div className="absolute -z-10 -bottom-6 -right-6 w-64 h-64 bg-primary/10 rounded-full blur-2xl" />
             <div className="absolute -z-10 -top-6 -left-6 w-32 h-32 bg-secondary/20 rounded-full blur-xl" />
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

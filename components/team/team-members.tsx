@@ -1,8 +1,4 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Linkedin } from "lucide-react";
 
@@ -94,32 +90,19 @@ const teamMembers = [
 ];
 
 export default function TeamMembers() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) return null;
-
   return (
-    <section className="py-16 flex items-center justify-center min-h-screen text-center">
+    <section className="team-directory py-16">
       <div className="container">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {teamMembers.map((member, index) => (
-            <motion.div
-              key={member.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.05 }}
-            >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+          {teamMembers.map((member) => (
+            <div key={member.name}>
               <Card className="overflow-hidden h-full hover:shadow-md transition-shadow">
                 <div className="aspect-square relative">
                   <Image
                     src={member.image}
                     alt={member.name}
                     fill
+                    sizes="(min-width: 1280px) 24vw, (min-width: 1024px) 32vw, (min-width: 640px) 46vw, 92vw"
                     className="object-cover"
                   />
                 </div>
@@ -142,7 +125,7 @@ export default function TeamMembers() {
                   </div>
                 </CardContent>
               </Card>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

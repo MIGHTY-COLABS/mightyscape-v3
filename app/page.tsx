@@ -1,5 +1,3 @@
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import HeroSection from "@/components/sections/hero-section";
 import ProductsPreview from "@/components/sections/products-preview";
 import ServicesPreview from "@/components/sections/services-preview";
@@ -10,11 +8,11 @@ import CtaSection from "@/components/sections/cta-section";
 
 export default function Home() {
   return (
-    <div className="flex flex-col w-full">
+    <div className="home-page">
       <HeroSection />
-      <AboutPreview />
       <ProductsPreview />
       <ServicesPreview />
+      <AboutPreview />
       <TechStack />
       <TeamPreview />
       <CtaSection />

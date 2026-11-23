@@ -4,7 +4,6 @@ import { ThemeProvider } from '@/components/theme-provider';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import { Toaster } from "@/components/ui/sonner";
-import GoogleAnalytics from '@/components/google-analytics';
 
 export const metadata: Metadata = {
   title: 'MIGHTYSCAPE - Leading Software Development Company in Kerala | IPTV & OTT Solutions',
@@ -126,13 +125,13 @@ export default function RootLayout({
       <body className="font-sans">
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="light"
           disableTransitionOnChange
         >
           <div className="flex min-h-screen flex-col">
+            <a href="#main-content" className="skip-link">Skip to content</a>
             <Header />
-            <main className="flex-1 w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">{children}</main>
+            <main id="main-content" tabIndex={-1} className="flex-1 min-w-0">{children}</main>
             <Footer />
             <Toaster />
           </div>

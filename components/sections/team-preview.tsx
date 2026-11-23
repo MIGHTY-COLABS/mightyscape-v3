@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -36,33 +36,18 @@ const teamMembers = [
 ];
 
 export default function TeamPreview() {
-  const [mounted, setMounted] = useState(false);
   const [ninjasExpanded, setNinjasExpanded] = useState(false);
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) return null;
-
   return (
-    <section className="py-20 bg-muted/30" style={{ paddingLeft: '50px', paddingRight: '50px' }}>
+    <section className="team-preview py-20 bg-muted/30">
       <div className="container">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
             className="text-3xl font-bold mb-4"
           >
             Meet Our Team
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
             className="text-muted-foreground"
           >
             Small but elite — we work like a family, deliver like a force.
@@ -74,10 +59,6 @@ export default function TeamPreview() {
           {teamMembers.map((member, index) => (
             <motion.div
               key={member.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <Card className="overflow-hidden h-full bg-card hover:shadow-md transition-shadow">
                 <div className="aspect-square relative">
@@ -109,14 +90,8 @@ export default function TeamPreview() {
         </div> */}
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <div 
-            className="relative overflow-hidden rounded-xl bg-gradient-to-r from-primary/30 via-primary/20 to-background border shadow-md"
-          >
+          <div className="team-disclosure relative overflow-hidden rounded-xl border">
             <div className="relative z-10 p-6 md:p-10">
               <div className="flex flex-col md:flex-row md:items-center justify-between">
                 <div className="mb-6 md:mb-0">
@@ -127,6 +102,7 @@ export default function TeamPreview() {
                 </div>
                 <Button 
                   onClick={() => setNinjasExpanded(!ninjasExpanded)}
+                  aria-expanded={ninjasExpanded}
                   variant="secondary"
                   className="min-w-36 self-start md:self-auto"
                 >
@@ -139,7 +115,6 @@ export default function TeamPreview() {
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: "auto" }}
                   exit={{ opacity: 0, height: 0 }}
-                  transition={{ duration: 0.3 }}
                   className="mt-6 pt-6 border-t"
                 >
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

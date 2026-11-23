@@ -1,8 +1,4 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 const techStack = [
   {
@@ -80,39 +76,21 @@ const techStack = [
 ];
 
 export default function TechStack() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) return null;
-
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="technology-section py-20 bg-muted/30">
       <div className="container max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center max-w-2xl mx-auto mb-12"
-        >
+        <div className="section-heading">
           <h2 className="text-3xl font-bold mb-4">Our Technology Stack for Software Development</h2>
           <p className="text-muted-foreground">
             We leverage cutting-edge technologies to deliver exceptional IPTV and OTT platform solutions, 
             mobile and web app development, and custom software development services across multiple platforms and devices.
           </p>
-        </motion.div>
+        </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center max-w-7xl mx-auto px-4">
-          {techStack.map((tech, index) => (
-            <motion.div
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 technology-grid">
+          {techStack.map((tech) => (
+            <div
               key={tech.alt_text}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.3, delay: index * 0.05 }}
               className="flex items-center justify-center"
             >
               <div className="relative w-24 h-24">
@@ -123,7 +101,7 @@ export default function TechStack() {
                   className="object-contain filter hover:brightness-110 transition-all duration-300"
                 />
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

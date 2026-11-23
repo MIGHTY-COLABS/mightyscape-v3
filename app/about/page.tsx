@@ -44,7 +44,7 @@ export default function AboutPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="flex flex-col w-full pt-24">
+      <div className="flex flex-col w-full">
         <AboutHero />
         <AboutValues />
         <AboutMission />

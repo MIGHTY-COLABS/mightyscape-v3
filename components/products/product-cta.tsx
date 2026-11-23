@@ -1,30 +1,12 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
 import { ArrowRight, MessageSquare, FileText } from "lucide-react";
 
 export default function ProductCta() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) return null;
-
   return (
-    <section className="py-20 bg-muted/50 relative">
+    <section className="site-cta py-20 bg-muted/50 relative">
       <div className="container max-w-7xl mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="max-w-3xl mx-auto text-center"
-        >
+        <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6">
             Ready to Transform Your Business?
           </h2>
@@ -61,7 +43,7 @@ export default function ProductCta() {
               </Link>
             </Button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

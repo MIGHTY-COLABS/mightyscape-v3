@@ -1,9 +1,5 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowUpRight, Tv, Building, Layout } from "lucide-react";
 
@@ -47,53 +43,37 @@ const products = [
     color: "bg-chart-3/10",
     textColor: "text-chart-3",
     href: "/products#signage"
+  },
+  {
+    id: "sitzstay",
+    title: "SitzStay",
+    subtitle: "Digital Guest Experience Platform",
+    description: "Turn in-room televisions into personalised guest information and service hubs for hotels, Airbnb properties, villas, and homestays.",
+    icon: Tv,
+    color: "bg-chart-2/10",
+    textColor: "text-chart-2",
+    href: "/products#sitzstay"
   }
 ];
 
 export default function ProductsPreview() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) return null;
-
   return (
-    <section className="py-20 bg-muted/50">
+    <section className="products-preview py-20 bg-muted/50">
       <div className="container max-w-7xl mx-auto">
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-3xl font-bold mb-4"
-          >
+        <div className="section-heading">
+          <h2 className="text-3xl font-bold mb-4">
             Our Software Products & Solutions
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-muted-foreground"
-          >
+          </h2>
+          <p className="text-muted-foreground">
             Powerful IPTV and OTT platform solutions, hospitality management software, and digital signage solutions designed for real-world challenges.
             Built with performance, security, and scalability in mind by our expert development team in Kerala.
-          </motion.p>
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto px-4">
-          {products.map((product, index) => (
-            <motion.div
-              key={product.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <Card className="h-full transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+          {products.map((product) => (
+            <div key={product.id}>
+              <Card className="feature-card h-full transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
                 <CardHeader>
                   <div className={`w-12 h-12 rounded-lg ${product.color} flex items-center justify-center mb-4`}>
                     <product.icon className={`h-6 w-6 ${product.textColor}`} />
@@ -113,7 +93,7 @@ export default function ProductsPreview() {
                   </Button>
                 </CardFooter>
               </Card>
-            </motion.div>
+            </div>
           ))}
         </div>
         

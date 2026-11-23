@@ -1,8 +1,4 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Check, Tv, Building, Layout } from "lucide-react";
 
@@ -95,42 +91,33 @@ const products = [
       "Hardware-agnostic deployment",
     ],
   },
+  {
+    id: "sitzstay",
+    title: "SitzStay",
+    subtitle: "Digital Guest Experience Platform",
+    description:
+      "Turn in-room televisions into personalised guest information and service hubs for hotels, Airbnb properties, villas, and homestays.",
+    icon: Tv,
+    color: "bg-chart-2/10",
+    textColor: "text-chart-2",
+    image: "https://cdn.mightyscape.in/ms/image/products/sitzstay-preview.webp",
+    demoUrl: "mailto:support@mightyscape.com",
+  },
 ];
 
 export default function ProductDetails() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) return null;
-
   return (
-    <section className="py-16">
+    <section className="catalog-section">
       <div className="container max-w-7xl mx-auto px-6">
         {products.map((product, index) => (
           <div
             key={product.id}
             id={product.id}
-            className={`mb-24 ${
-              index !== products.length - 1 ? "border-b pb-24" : ""
-            }`}
+            className="catalog-entry"
           >
-            <div
-              className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-                index % 2 !== 0 ? "lg:flex-row-reverse" : ""
-              }`}
-            >
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-              >
-                <div
-                  className={`w-12 h-12 rounded-lg ${product.color} flex items-center justify-center mb-4`}
-                >
+            <div className={index % 2 === 0 ? "catalog-layout" : "catalog-layout catalog-layout-reverse"}>
+              <div>
+                <div className={`w-12 h-12 rounded-lg ${product.color} flex items-center justify-center mb-4`}>
                   <product.icon className={`h-6 w-6 ${product.textColor}`} />
                 </div>
                 <h2 className="text-3xl font-bold mb-2">{product.title}</h2>
@@ -141,43 +128,37 @@ export default function ProductDetails() {
                   {product.description}
                 </p>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
-                  {product.features.map((feature, idx) => (
-                    <motion.div
-                      key={idx}
-                      initial={{ opacity: 0, x: -10 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.3, delay: idx * 0.05 }}
-                      className="flex items-start space-x-2"
-                    >
-                      <div className="flex-shrink-0 h-5 w-5 rounded-full bg-primary/20 flex items-center justify-center mt-0.5">
-                        <Check className="h-3 w-3 text-primary" />
+                {product.features && (
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+                    {product.features.map((feature, idx) => (
+                      <div
+                        key={idx}
+                        className="flex items-start space-x-2"
+                      >
+                        <div className="flex-shrink-0 h-5 w-5 rounded-full bg-primary/20 flex items-center justify-center mt-0.5">
+                          <Check className="h-3 w-3 text-primary" />
+                        </div>
+                        <span className="text-sm">{feature}</span>
                       </div>
-                      <span className="text-sm">{feature}</span>
-                    </motion.div>
-                  ))}
-                </div>
+                    ))}
+                  </div>
+                )}
 
                 {product.demoUrl ? (
                   <Button asChild>
-                    <a href={product.demoUrl} target="_blank" rel="noopener noreferrer">
+                    <a href={product.demoUrl}
+                      target={product.demoUrl.startsWith("mailto:") ? undefined : "_blank"}
+                      rel="noopener noreferrer">
                       Request Demo
                     </a>
                   </Button>
                 ) : (
                   <Button>Request Demo</Button>
                 )}
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className={index % 2 !== 0 ? "lg:mr-12" : "lg:ml-12"}
-              >
-                <div className="rounded-lg overflow-hidden shadow-xl">
+              <div className="catalog-visual">
+                <div className="catalog-image">
                   <Image
                     src={product.image}
                     alt={product.title}
@@ -186,7 +167,7 @@ export default function ProductDetails() {
                     className="w-full object-cover aspect-video"
                   />
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         ))}

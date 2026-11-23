@@ -1,8 +1,4 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Check, Code, Cloud, Palette, Shield, GitBranch } from "lucide-react";
 
@@ -105,30 +101,17 @@ const services = [
 ];
 
 export default function ServicesList() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) return null;
-
   return (
-    <section className="py-16">
+    <section className="catalog-section">
       <div className="container">
         {services.map((service, index) => (
-          <div 
+          <div
             key={service.id}
             id={service.id}
-            className={`mb-24 ${index !== services.length - 1 ? "border-b pb-24" : ""}`}
+            className="catalog-entry"
           >
-            <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 !== 0 ? "lg:flex-row-reverse" : ""}`}>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-              >
+            <div className={index % 2 === 0 ? "catalog-layout" : "catalog-layout catalog-layout-reverse"}>
+              <div>
                 <div className={`w-12 h-12 rounded-lg ${service.color} flex items-center justify-center mb-4`}>
                   <service.icon className={`h-6 w-6 ${service.textColor}`} />
                 </div>
@@ -139,33 +122,23 @@ export default function ServicesList() {
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
                   {service.features.map((feature, idx) => (
-                    <motion.div 
+                    <div
                       key={idx}
-                      initial={{ opacity: 0, x: -10 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.3, delay: idx * 0.05 }}
                       className="flex items-start space-x-2"
                     >
                       <div className="flex-shrink-0 h-5 w-5 rounded-full bg-primary/20 flex items-center justify-center mt-0.5">
                         <Check className="h-3 w-3 text-primary" />
                       </div>
                       <span className="text-sm">{feature}</span>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
                 
                 <Button>Contact Us</Button>
-              </motion.div>
+              </div>
               
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className={index % 2 !== 0 ? "lg:mr-12" : "lg:ml-12"}
-              >
-                <div className="rounded-lg overflow-hidden shadow-xl">
+              <div className="catalog-visual">
+                <div className="catalog-image">
                   <Image
                     src={service.image}
                     alt={service.title}
@@ -174,7 +147,7 @@ export default function ServicesList() {
                     className="w-full object-cover aspect-video"
                   />
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         ))}

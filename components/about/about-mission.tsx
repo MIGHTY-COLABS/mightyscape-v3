@@ -1,7 +1,3 @@
-"use client";
-
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const timeline = [
@@ -33,46 +29,21 @@ const timeline = [
 ];
 
 export default function AboutMission() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) return null;
-
   return (
-    <section className="py-16 md:py-24">
+    <section className="mission-section py-16 md:py-24">
       <div className="container max-w-7xl mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-3xl font-bold mb-4"
-          >
+          <h2 className="text-3xl font-bold mb-4">
             Our Mission & Vision
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-xl text-muted-foreground"
-          >
+          </h2>
+          <p className="text-xl text-muted-foreground">
             We're on a mission to transform businesses through innovative technology solutions.
             Our vision is to be the partner of choice for companies looking to thrive in the digital age.
-          </motion.p>
+          </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16 max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
+          <div>
             <Card className="border-primary/20 bg-primary/5 h-full">
               <CardHeader>
                 <CardTitle>Our Mission</CardTitle>
@@ -86,14 +57,9 @@ export default function AboutMission() {
                 </p>
               </CardContent>
             </Card>
-          </motion.div>
+          </div>
           
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
+          <div>
             <Card className="border-secondary/20 bg-secondary/5 h-full">
               <CardHeader>
                 <CardTitle>Our Vision</CardTitle>
@@ -107,29 +73,19 @@ export default function AboutMission() {
                 </p>
               </CardContent>
             </Card>
-          </motion.div>
+          </div>
         </div>
         
-        <motion.h3
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-2xl font-bold mb-8 text-center"
-        >
+        <h3 className="text-2xl font-bold mb-8 text-center">
           Our Journey
-        </motion.h3>
+        </h3>
         
         <div className="relative max-w-3xl mx-auto">
           <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-[2px] bg-border" />
           
           {timeline.map((item, index) => (
-            <motion.div
+            <div
               key={item.year}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
               className={`relative mb-12 flex ${
                 index % 2 === 0 ? "md:justify-start" : "md:justify-end"
               } justify-center`}
@@ -147,7 +103,7 @@ export default function AboutMission() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

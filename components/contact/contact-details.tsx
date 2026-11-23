@@ -1,26 +1,9 @@
-"use client";
-
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 export default function ContactDetails() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) return null;
-
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 0.2 }}
-      className="flex flex-col space-y-8"
-    >
+    <div className="contact-details flex flex-col gap-5">
       <div>
         <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
         <p className="text-muted-foreground mb-8">
@@ -99,6 +82,6 @@ export default function ContactDetails() {
           referrerPolicy="strict-origin-when-cross-origin"
         ></iframe>
       </div>
-    </motion.div>
+    </div>
   );
 }

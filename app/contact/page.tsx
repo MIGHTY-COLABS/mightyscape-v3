@@ -44,7 +44,7 @@ export default function ContactPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="flex flex-col w-full pt-24">
+      <div className="flex flex-col w-full">
         <ContactHero />
         <div className="container py-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">

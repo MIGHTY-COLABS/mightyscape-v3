@@ -1,29 +1,18 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
 export default function NinjasX() {
-  const [mounted, setMounted] = useState(false);
   const [expanded, setExpanded] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) return null;
 
   return (
     <section className="py-16 bg-muted/30 text-center relative overflow-hidden">
       <div className="container mx-auto px-4 max-w-7xl">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="relative overflow-hidden rounded-xl bg-gradient-to-r from-primary/30 via-primary/20 to-background border shadow-md"
+          className="team-disclosure relative overflow-hidden rounded-xl border"
         >
           <div className="relative z-10 p-8 md:p-12">
             <div className="flex flex-col md:flex-row md:items-center justify-between">
@@ -38,6 +27,7 @@ export default function NinjasX() {
               </div>
               <Button
                 onClick={() => setExpanded(!expanded)}
+                  aria-expanded={expanded}
                 variant="secondary"
                 size="lg"
                 className="min-w-36 self-start md:self-auto group"
@@ -62,7 +52,6 @@ export default function NinjasX() {
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: "auto" }}
                   exit={{ opacity: 0, height: 0 }}
-                  transition={{ duration: 0.3 }}
                   className="mt-8 pt-8 border-t"
                 >
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -44,7 +43,6 @@ const formSchema = z.object({
 });
 
 export default function ContactForm() {
-  const [mounted, setMounted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -70,19 +68,9 @@ export default function ContactForm() {
     }, 1500);
   }
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) return null;
-
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      <div className="bg-card shadow-sm border rounded-xl p-6 md:p-8">
+    <div>
+      <div className="contact-form bg-card border rounded-xl p-6 md:p-8">
         <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
         
         <Form {...form}>
@@ -184,6 +172,6 @@ export default function ContactForm() {
           </form>
         </Form>
       </div>
-    </motion.div>
+    </div>
   );
 }

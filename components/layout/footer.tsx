@@ -1,5 +1,5 @@
+import Image from "next/image";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
 import { 
   Facebook, 
   Twitter, 
@@ -25,15 +25,17 @@ const FooterHeading = ({ children }: { children: React.ReactNode }) => (
 
 export default function Footer() {
   return (
-    <footer className="border-t bg-muted/40">
-      <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer className="site-footer">
+      <div className="container py-12 md:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.25fr_1fr_1fr_1fr] gap-8">
           <div>
-            <Link href="/" className="inline-block mb-6">
-              <img 
-                src="/image/Artboard%201.png" 
-                alt="MIGHTYSCAPE - Leading Software Development Company in Kerala" 
-                className="h-8"
+            <Link href="/" className="footer-brand mb-6">
+              <Image
+                src="/image/mightyscape-dark-wordmark.png"
+                alt="MIGHTYSCAPE - Leading Software Development Company in Kerala"
+                width={1920}
+                height={320}
+                className="brand-image"
               />
             </Link>
             <p className="text-sm text-muted-foreground max-w-xs">
@@ -63,6 +65,7 @@ export default function Footer() {
               <li><FooterLink href="/products#livelink">LiveLink OTT Platform Solutions</FooterLink></li>
               <li><FooterLink href="/products#hostlink">HostLink Hospitality Management Software</FooterLink></li>
               <li><FooterLink href="/products#signage">Digital Signage Solutions</FooterLink></li>
+              <li><FooterLink href="/products#sitzstay">SitzStay</FooterLink></li>
             </ul>
           </div>
           
@@ -99,11 +102,11 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="border-t mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center">
+        <div className="border-t mt-10 pt-6 flex flex-col sm:flex-row justify-between items-start gap-x-6">
           <p className="text-sm text-muted-foreground">
             &copy; {new Date().getFullYear()} MIGHTYSCAPE PRIVATE LIMITED. All rights reserved. Leading Software Development Company in Kerala, India.
           </p>
-          <div className="mt-4 sm:mt-0 flex space-x-6 text-sm">
+          <div className="mt-4 sm:mt-0 flex shrink-0 flex-wrap gap-x-6 gap-y-2 text-sm">
             <FooterLink href="/privacy">Privacy Policy</FooterLink>
             <FooterLink href="/terms">Terms of Service</FooterLink>
           </div>

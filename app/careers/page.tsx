@@ -72,7 +72,7 @@ export default function CareersPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="flex flex-col w-full pt-24">
+      <div className="flex flex-col w-full careers-page">
         <div className="container py-16">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h1 className="text-4xl font-bold mb-6">Join Our Software Development Team in Kerala</h1>
@@ -98,7 +98,7 @@ export default function CareersPage() {
                       </div>
                     </div>
                     <Button asChild className="md:self-start">
-                      <a href={`mailto:support@mightyscape.com?subject=Application for ${position.title}`}>
+                      <a href={`mailto:hr@mightyscape.com?subject=${encodeURIComponent(`Application for ${position.title}`)}`}>
                         <Mail className="mr-2 h-4 w-4" />
                         Apply Now
                       </a>
@@ -131,7 +131,7 @@ export default function CareersPage() {
                   Send us your resume and let us know how you can contribute to MIGHTYSCAPE's innovative projects in IPTV and OTT platform solutions, mobile and web app development, and custom software development.
                 </p>
                 <Button asChild size="lg">
-                  <a href="mailto:support@mightyscape.com?subject=General Application - MIGHTYSCAPE">
+                  <a href="mailto:hr@mightyscape.com?subject=General Application - MIGHTYSCAPE">
                     <Mail className="mr-2 h-4 w-4" />
                     Send Your Resume
                   </a>
